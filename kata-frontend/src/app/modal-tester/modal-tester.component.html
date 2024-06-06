@@ -1,0 +1,25 @@
+<div class="modal-header">
+  <h4 class="modal-title">[FooBarQuix]</h4>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="mb-3">
+      <label for="nombre">Mon nombre</label>
+      <div class="input-group">
+        <input
+          id="nombre"
+          class="form-control"
+          placeholder="Nombre entre 1 et 100"
+          type="number"
+          name="nombre"
+          (change)="checkNombre()"
+          [(ngModel)]="nombre"
+        />
+        <button class="btn btn-secondary" (click)="calculate()" [disabled]="!isNombreValid" type="button">Calculer</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close()">Fermer</button>
+</div>

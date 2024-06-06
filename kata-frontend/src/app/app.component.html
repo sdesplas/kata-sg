@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <h1>Kata Backend API</h1>
+  <ul>
+    <li>Si le nombre est divisible par 3 ou s'il contient 3, la chaîne  de characters doit contenir "FOO"</li>
+    <li>Si le nombre est divisible par 5 ou s'il contient 5, la chaîne  de characters doit contenir "BAR"</li>
+    <li>Si le nombre contient 7, la chaîne  de characters doit contenir "QUIX"</li>
+    <li>La règle "divisible par" est plus prioritaire que la règle "contient"</li>
+    <li>Le contenu est analysé de gauche à droite</li>
+    <li>Si aucune des règles n'est vérifiée, retourner la nombre en entrée sous forme de chaîne de characters</li>
+  </ul>
+  @if (result) {
+    <ngb-alert [type]="'success'" [dismissible]="false">Résultat: {{ result }}</ngb-alert>
+  }
+  <button type="button" class="btn btn-primary m-3" (click)="openTesterModal()">Tester</button>
+</div>
